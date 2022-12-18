@@ -4,6 +4,8 @@
 -- ------------------------------------------------------
 -- Server version	8.0.23
 
+use heroku_2529b0d8fbb6ed1;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -21,7 +23,7 @@
 
 DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `o_id` int NOT NULL AUTO_INCREMENT,
   `p_id` int NOT NULL,
@@ -29,7 +31,7 @@ CREATE TABLE `orders` (
   `o_quantity` int NOT NULL,
   `o_date` varchar(450) NOT NULL,
   PRIMARY KEY (`o_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +50,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(450) NOT NULL,
@@ -56,7 +58,7 @@ CREATE TABLE `products` (
   `price` double NOT NULL,
   `image` varchar(450) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +77,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
@@ -83,7 +85,7 @@ CREATE TABLE `users` (
   `password` varchar(250) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
